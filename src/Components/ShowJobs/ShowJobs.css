@@ -1,0 +1,21 @@
+.showJobs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto 100px auto;
+}
+@media screen and (max-width:820px) {
+    .showJobs{
+        gap: 45px;
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width:40px) {
+    .showJobs{
+        gap: 30px;
+    }
+}

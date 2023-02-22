@@ -1,0 +1,147 @@
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.myJob{
+    width:100%;
+    background-color: white;
+    box-shadow: 0px 8px 12px 1px hsla(180, 43%, 57%, 0.151);
+    border-radius: 5px;
+    padding: 30px 5%;
+}
+.devProfile{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5%;
+}
+.devProfile img{
+    width: 70px;
+}
+.devFilter{
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3%;
+}
+.devCompany{
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5%;
+}
+.devTitle{
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.devStats{
+    width: inherit;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    gap: 3%;
+}
+.devStats p{
+    color: var(--Dark-Grayish-Cyan);
+}
+.devFilter button{
+    border: none;
+    padding: 8px;
+    font-weight: 700;
+    color: var(--Desaturated-Dark-Cyan);
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 15px;
+    background-color: var(--Light-Grayish-Cyan-2);
+}
+.devFilter button:hover{
+    color: white;
+    background-color: var(--Desaturated-Dark-Cyan);
+}
+.new{
+    font-size: 0.8rem;
+    text-align: center;
+    background-color: var(--Desaturated-Dark-Cyan);
+    color: white;
+    border-radius: 12px;
+    font-weight: 700;
+}
+.featured{
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: center;
+    background-color: var(--Very-Dark-Grayish-Cyan);
+    color: white;
+    border-radius: 12px;
+}
+.featured p, .new p{
+    padding: 8px;
+    position: relative;
+    top: 1px;
+}
+.featuredDev{
+    border-left: 5px solid var(--Desaturated-Dark-Cyan);
+}
+.compText{
+    font-weight: 700;
+    color: var(--Desaturated-Dark-Cyan);
+}
+.devSpec h3{
+    cursor: pointer;
+}
+.devSpec h3:hover{
+    color: var(--Desaturated-Dark-Cyan);
+}
+.point{
+    color: var(--Dark-Grayish-Cyan);
+}
+@media screen and (max-width:770px) {
+    .flex{
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: left;
+        align-items: flex-start;
+    }
+    .devProfile{
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--Dark-Grayish-Cyan);
+        max-width: unset;
+        flex-direction: column;
+        position:relative;
+    }
+    .devProfile img{
+        left: 0;
+        top: 0;
+        transform: translateY(-100%);
+        position: absolute;
+        width: 60px;
+    }
+    .devTitle{
+        padding-top: 15px;
+    }
+    .devFilter{
+        justify-content: flex-start;
+    }
+    .devFilter button{
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width:400px) {
+    .devProfile img{
+        width: 50px;
+    }
+}

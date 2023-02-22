@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
 }
+:root{
+    /* ### Primary */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    --Desaturated-Dark-Cyan: hsl(180, 29%, 50%);
+
+    /* ### Neutral */
+
+    --Light-Grayish-Cyan-1 /*(Background)*/: hsl(180, 52%, 96%);
+    --Light-Grayish-Cyan-2 /*(Filter Tablets)*/: hsl(180, 31%, 95%);
+    --Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+    --Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav{
+    width: 100%;
+    position: relative;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header{
+    background-image: url(./images/bg-header-desktop.svg);
+    background-color: var(--Desaturated-Dark-Cyan);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    padding: 65px 5%;
 }
-
-.App-link {
-  color: #61dafb;
+body{
+    background-color: var(--Light-Grayish-Cyan-1);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App{
+    width: 100%;
+}
+@media screen and (max-width:420px) {
+    .header{
+        background-image: url(./images/bg-header-mobile.svg);
+    }
 }
