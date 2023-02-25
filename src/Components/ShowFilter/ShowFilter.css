@@ -9,6 +9,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin: auto;
+    margin-top: -40px;
 }
 .clear{
     cursor: pointer;
