@@ -1,5 +1,5 @@
 import './MyJob.css'
-const MyJob = ({dev, handleClick}) => {
+const MyJob = ({dev, filterJobs}) => {
     return (
         <div className={dev.id===1||dev.id===2?"myJob featuredDev flex":"myJob flex"} key={dev.id}>
             <div className="devProfile">
@@ -27,16 +27,16 @@ const MyJob = ({dev, handleClick}) => {
                 </div>
             </div>
             <div className="devFilter">
-                <button onClick={()=>handleClick(dev.role)}>{dev.role}</button>
-                <button onClick={()=>handleClick(dev.role)}>{dev.level}</button>
+                <button onClick={()=>filterJobs("role", dev.role)}>{dev.role}</button>
+                <button onClick={()=>filterJobs("level", dev.level)}>{dev.level}</button>
                 {dev.languages.map(lang=>{
                     return(
-                        <button onClick={()=>handleClick(lang)}>{lang}</button>
+                        <button onClick={()=>filterJobs("languages", lang)}>{lang}</button>
                     ) 
                 })}
                 {dev.tools.map(tool=>{
                     return(
-                        <button onClick={()=>handleClick(tool)}>{tool}</button>
+                        <button onClick={()=>filterJobs("tools", tool)}>{tool}</button>
                     )
                 })}
             </div>

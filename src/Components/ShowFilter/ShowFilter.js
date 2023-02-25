@@ -4,11 +4,12 @@ const ShowFilter = ({filters, clearFilters, removeFilter}) => {
     return ( 
         <div className="showFilter">
             <div className="filters">
-                {filters.map((filter)=>{
+                {filters.map((key, filter)=>{
+                    let myKey = Object.keys(key)[0]
                     return(
                         <div className='filterButton'>
-                            <button className='filter'>{filter}</button>
-                            <button className='close' onClick={removeFilter(filter)}><img src={close} alt="" /></button>
+                            <button className='filter'>{key[myKey]}</button>
+                            <button className='close' onClick={()=>removeFilter(filter)}><img src={close} alt="" /></button>
                         </div>
                     )
                 })}
